@@ -43,9 +43,9 @@ public class EmployeeMapper {
         }
     }
 
-    private Integer fromDepartmentType(){
+    //private Integer fromDepartmentType(){
 
-    }
+    //}
 
     private OccupationType toOccupationType(String occupation) {
         if (occupation == null) {

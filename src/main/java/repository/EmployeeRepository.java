@@ -32,22 +32,22 @@ public class EmployeeRepository extends Repository {
         }
     }
 
-    public void pushToDB(Employee e) throws SQLException {
-        createConnection();
-        PreparedStatement insertEmployeeStatement = connection.prepareStatement("SELECT * FROM DARBUOTOJAS");
-        insertEmployeeStatement.setString(1, e.getId());
-        insertEmployeeStatement.setString(2, e.getName());
-        insertEmployeeStatement.setString(3, e.getLastName());
-        insertEmployeeStatement.setDate(4, Date.valueOf(e.getStartedAt()));
-        insertEmployeeStatement.setDate(5, Date.valueOf(e.getBirthDate()));
-        insertEmployeeStatement.setString(6, String.valueOf(e.getOccupation()));
-        insertEmployeeStatement.setInt(7, e.getDepartment());
-
-
-
-
-        //INSERT INTO DARBUOTOJAS (ASMENSKODAS ,VARDAS ,PAVARDE ,DIRBANUO ,GIMIMOMETAI ,PAREIGOS ,SKYRIUS_PAVADINIMAS ,PROJEKTAS_ID )
-        // VALUES ('39922334459','Kestutis','Didysys', '2011-12-17', '1986-09-10','Testuotojas','Java',3);
-    }//pushToDB
-
+//    public void pushToDB(Employee e) throws SQLException {
+//        createConnection();
+//        PreparedStatement insertEmployeeStatement = connection.prepareStatement("SELECT * FROM DARBUOTOJAS");
+//        insertEmployeeStatement.setString(1, e.getId());
+//        insertEmployeeStatement.setString(2, e.getName());
+//        insertEmployeeStatement.setString(3, e.getLastName());
+//        insertEmployeeStatement.setDate(4, Date.valueOf(e.getStartedAt()));
+//        insertEmployeeStatement.setDate(5, Date.valueOf(e.getBirthDate()));
+//        insertEmployeeStatement.setString(6, String.valueOf(e.getOccupation()));
+//        insertEmployeeStatement.setInt(7, e.getDepartment());
+//
+//
+//
+//
+//        //INSERT INTO DARBUOTOJAS (ASMENSKODAS ,VARDAS ,PAVARDE ,DIRBANUO ,GIMIMOMETAI ,PAREIGOS ,SKYRIUS_PAVADINIMAS ,PROJEKTAS_ID )
+//        // VALUES ('39922334459','Kestutis','Didysys', '2011-12-17', '1986-09-10','Testuotojas','Java',3);
+//    }//pushToDB
+//
 }
