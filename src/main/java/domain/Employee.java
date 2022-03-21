@@ -34,6 +34,8 @@ public class Employee {
         return department;
     }
 
+    public Integer getProjectId() { return projectId; }
+
     private String name;
     private String lastName;
     private LocalDate startedAt;
@@ -54,10 +56,9 @@ public class Employee {
         this.projectId = projectId;
     }
 
-
-    public Integer getProjectId() {
-        return projectId;
+    public Employee() {
     }
+
 
     @Override
     public String toString() {
@@ -72,4 +73,6 @@ public class Employee {
             ", projectId=" + projectId +
             '}';
     }
+
+
 }

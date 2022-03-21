@@ -1,0 +1,57 @@
+1. Išvesti visų darbuotojų vardus ir pavardes                                                  +
+ 2. Išvesti visus projektus ir juose dirbančius žmones:
+ = Projekto pavadinimas =
+ 1. Jonas Jonaitis
+ 2. Petras Petraitis
+
+ 3. Parašyti programą, leidžiančią įvesti naujus darbuotojus
+ 4. Papildyti programą galimybe priskirti darbuotoją projektui
+ Užduotis 2:
+ Programa turi mokėti importuoti projektus iš tekstinio failo, kuriame kiekviena eilutė laiko
+ projekto pavadinimą.
+ Programa turi po eilutę įterpinėti naujas įmones
+ Jei aptinka dublikatą, visos iš failo įterptos įmonės turi būti pašalintos
+ Panaudokite transakcijas, pakeitimams atšaukti po klaidos
+ Informacija 2 užduočiai:
+ Sukurkime unikalumo apribojimą projektų pavadinimams
+ ALTER TABLE Projektas ADD CONSTRAINT UnikalusPavadinimas UNIQUE(PAVADINIMAS);
+ Jei bus bandoma įterpti pakartotiną Projektas.Pavadinimas reikšmę, DB išmes klaidą, kurią
+ JDBC grąžins kaip SQLException
+ // Paprastas būdas nuskaityti visas eilutes iš failo
+ List<String> lines = Files.readAllLines(Paths.get(“failas.txt”), Charset.defaultCharset());
+***************************************************************************************************************
+
+
+WHERE PROJEKTAS_ID=NULL
+SELECT * FROM DARBUOTOJAS WHERE PROJEKTAS_ID=1
+SELECT * FROM DARBUOTOJAS WHERE PROJEKTAS_ID IS NULL;
+
+
+
+37007880549,Rimantas,Andrijauskas,1999-12-31,1969-07-22,Testuotojas,Java,1
+
+
+UPDATE DARBUOTOJAS SET PROJEKTAS_ID=1 WHERE ASMENSKODAS ='38807291234';
+
+INSERT INTO PROJEKTAS (PAVADINIMAS) VALUES ('Vilnis');
+DELETE FROM PROJEKTAS WHERE PAVADINIMAS='Vilnis';
+
+COMMIT;
+SET AUTOCOMMIT FALSE;
+INSERT INTO PROJEKTAS (PAVADINIMAS) VALUES ('Vilnis');
+INSERT INTO PROJEKTAS (PAVADINIMAS) VALUES ('Vilnis');
+INSERT INTO PROJEKTAS (PAVADINIMAS) VALUES ('Vilnis1');
+ROLLBACK;
+COMMIT;
+SET AUTOCOMMIT TRUE;
+SELECT * FROM PROJEKTAS;
+
+INSERT INTO SKYRIUS (PAVADINIMAS,VADOVAS_ASMENSKODAS ) VALUES ('PERL','38807291234');
+
+
+
+Java	48509141175
+Testavimo	38804172782
+C#	38904172782
+PERL	38807291234
+Asembleris 38901228523

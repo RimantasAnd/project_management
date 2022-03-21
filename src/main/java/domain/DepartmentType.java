@@ -1,6 +1,12 @@
 package domain;
 
 public enum DepartmentType {
-    //QA - Quality Assurance - Testavimo
-    QA, JAVA, C_SHARP
+
+    QA ("Testavimo"),
+    JAVA ("Java"),
+    C_SHARP ("C#");
+
+    DepartmentType(String depType) {
+
+    }
 }

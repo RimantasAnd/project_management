@@ -1,7 +1,6 @@
 package domain;
 
 public class Department {
-
     private String name;
     private String id;
 
@@ -9,7 +8,6 @@ public class Department {
         this.name = name;
         this.id = id;
     }
-
 
     public String getName() {
         return name;
@@ -19,7 +17,6 @@ public class Department {
         return id;
     }
 
-
     @Override
     public String toString() {
         return "Department{" +
@@ -27,6 +24,4 @@ public class Department {
                 ", id='" + id + '\'' +
                 '}';
     }
-
-
 }//class
